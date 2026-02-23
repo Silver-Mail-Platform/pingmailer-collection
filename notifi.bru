@@ -1,0 +1,37 @@
+meta {
+  name: notifi
+  type: http
+  seq: 5
+}
+
+post {
+  url: https://localhost:8443/notify
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: <token>
+}
+
+body:json {
+  {
+    "smtp_host": "smtp-server-container",
+    "smtp_port": 587,
+    "smtp_username": "user@yourdomain.com",
+    "smtp_password": "your-password",
+    "smtp_sender": "noreply@yourdomain.com",
+    "recipient_email": "recipient@example.com",
+    "recipient_name": "John Doe",
+    "app_name": "MyApp"
+  }
+}
+
+settings {
+  encodeUrl: false
+  timeout: 0
+}

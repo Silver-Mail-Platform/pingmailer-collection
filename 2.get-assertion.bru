@@ -1,0 +1,32 @@
+meta {
+  name: 2.get-assertion
+  type: http
+  seq: 8
+}
+
+post {
+  url: https://<domain>:8090/flow/execute
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "flowId": "<flow-id>",
+    "inputs": {
+      "username": "admin",
+      "password": "admin",
+      "requested_permissions": "system"
+    },
+    "action": "action_001"
+  }
+}
+
+body:form-urlencoded {
+  : 
+}
+
+settings {
+  encodeUrl: false
+  timeout: 0
+}

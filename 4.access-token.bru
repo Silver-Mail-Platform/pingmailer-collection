@@ -1,0 +1,28 @@
+meta {
+  name: 4.access-token
+  type: http
+  seq: 6
+}
+
+post {
+  url: https://localhost:8090/oauth2/token
+  body: formUrlEncoded
+  auth: basic
+}
+
+headers {
+  Authorization: Bearer <TOKEN>}
+
+auth:basic {
+  username: 123
+  password: !23
+}
+
+body:form-urlencoded {
+  grant_type: client_credentials
+}
+
+settings {
+  encodeUrl: false
+  timeout: 0
+}

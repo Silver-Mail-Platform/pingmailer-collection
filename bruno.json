@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "pingmail-api",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
