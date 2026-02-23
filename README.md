@@ -1,0 +1,1 @@
+# pingmailer-collection
